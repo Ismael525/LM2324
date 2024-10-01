@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+<body>
+    <h1>Tablas</h1>
+    <p>Una tabla permite la distribucion de la informacion organizada por filas(rows)
+        y columnas(cols). Se utiliza la etiqueta html de nombre <i>table</i>. 
+        Ejemplo:
+    </p>
+    <table border="1"> <!--Indica que voy a diseñar una tabla -->
+        <tr>
+            <td>Elemento 1</td> <!-- Cada celda tiene una etiqueta td -->
+            <td>Elemento 2</td>
+        </tr><!-- Cada fila tiene un tr -->
+        <tr><td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr><!-- Cada fila tiene un tr -->
+    </table>
+    <h2>Problemas...</h2>
+    <p>Vamos a experimentar problemas cuando el numero de columnas 
+       no sea el mismo en todas las filas. LO siguiente esta mal... Ejemplo:</p>
+       <table border="1"> <!--Indica que voy a diseñar una tabla -->
+        <tr>
+            <td>Elemento 1</td> <!-- Cada celda tiene una etiqueta td -->
+
+        </tr><!-- Cada fila tiene un tr -->
+        <tr><td>Elemento 3</td><td>Elemento 4</td></tr><!-- Cada fila tiene un tr -->
+    </table>
+    <h2>Soluciones</h2>
+    <p>Si deseamos que una celda ocupe mas de una columna o fila entonces 
+        utilizaremos las propiedades colspan o rowspan. Ejemplo:
+    </p>
+    <table border="1"> <!--Indica que voy a diseñar una tabla -->
+        <tr>
+            <td colspan="2">Elemento 1</td> <!-- Cada celda tiene una etiqueta td -->
+            
+        </tr><!-- Cada fila tiene un tr -->
+        <tr><td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr><!-- Cada fila tiene un tr -->
+    </table>
+    <p>Otro ejemplo ahora con una celda que ocupa dos filas. Ejemplo:</p>
+    <table border="1"> <!--Indica que voy a diseñar una tabla -->
+        <tr>
+            <td rowspan="2">Elemento 1</td> <!-- Cada celda tiene una etiqueta td -->
+            <td bgcolor="red"><font color="white">Elemento 2</font></td> <!-- Para colorear la celda usamos bgcolor 
+            y para cambiar el color de las letas usamos font-->
+        </tr><!-- Cada fila tiene un tr -->
+
+        <td>Elemento 4</td>
+        </tr><!-- Cada fila tiene un tr -->
+    </table>
+</body>
+</html>
