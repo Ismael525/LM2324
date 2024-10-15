@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <h1>Formulario</h1>
+    <form>
+
+        <label for="velocidad">Seleccione la velocidad:</label><br>
+        <select id="velocidad" name="velocidad" multiple>
+            <option value="100_mbits">100 Mbits</option>
+            <option value="1000_mbits">1000 Mbits</option>
+        </select>
+        <br><br>
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni">
+        <br><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <br><br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos">
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color">
+        <br><br>
+
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="6" cols="49">Por favor, escriba aquí</textarea>
+        <br><br>
+
+        <input type="checkbox" id="amd" name="procesador" value="procesadoramd">
+        <label for="amd">AMD</label><br>
+
+        <input type="checkbox" id="intel_i5" name="procesador" value="procesadorintel_i5">
+        <label for="intel_i5">Intel i5</label><br>
+
+        <input type="checkbox" id="intel_i7" name="procesador" value="procesadorintel_i7">
+        <label for="intel_i7">Intel i7</label>
+        <br><br>
+
+        <label for="hora">Elija una hora:</label>
+        <input type="time" id="hora" name="hora">
+        <br><br>
+
+        <p>Seleccione una red:</p>
+        <input type="radio" id="red2g" name="red" value="red2g">
+        <label for="red2g">2G</label><br>
+
+        <input type="radio" id="red3g" name="red" value="red3g">
+        <label for="red3g">3G</label><br>
+
+        <input type="radio" id="red4g" name="red" value="red4g">
+        <label for="red4g">4G</label>
+        <br><br>
+
+        <label for="archivo1">Seleccione un archivo:</label>
+        <input type="file" id="archivo1" name="archivo1">
+        <br><br>
+
+        <p>Seleccione una asignatura:</p>
+        <input type="checkbox" id="historia" name="asignatura" value="asignaturahistoria">
+        <label for="historia">Historia</label><br>
+
+        <input type="checkbox" id="geografia" name="asignatura" value="asignaturageografia">
+        <label for="geografia">Geografía</label><br>
+
+        <input type="checkbox" id="lengua" name="asignatura" value="asignaturalengua">
+        <label for="lengua">Lengua</label><br>
+
+        <input type="checkbox" id="matematicas" name="asignatura" value="asignaturamatematicas">
+        <label for="matematicas">Matemáticas</label>
+        <br><br>
+
+        <label for="hora2">Hora:</label>
+        <input type="time" id="hora2" name="hora2">
+        <br><br>
+
+        <label for="archivo2">Seleccione otro archivo:</label>
+        <input type="file" id="archivo2" name="archivo2">
+        <br><br>
+
+        <label for="recuadro">Inserte texto aquí:</label><br>
+        <textarea id="recuadro" name="recuadro" rows="8" cols="49">Inserte aqui el texto</textarea>
+        <br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>
