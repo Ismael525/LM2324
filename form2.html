@@ -3,19 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario 2</title>
+    <title>Formulario</title>
 </head>
 <body>
-    <fieldset>
-        <legend>Complete, por favor:</legend>
-        <label for="time">Elije una hora:</label>
-        <input type="time" id="time" name="time">
-        <br>
-        <input type="radio" id="" name="lenguaje" value="">
-            <label for="html">Alemania</label><br>
-            <input type="radio" id="" name="lenguaje" value="">
-            <label for="css">Ingles</label><br>
-            <input type="radio" id="" name="lenguaje" value="">
-            <label for="javascript">javascript</label>
+
+    <form>
+        <fieldset>
+        <legend>Complete, por favor</legend>
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora">
+        <br><br>
+
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="6" cols="45">Utilice este cuadro para escribir</textarea>
+        <br><br>
+
+        <input type="radio" id="java" name="lenguaje" value="lenguajejava">
+        <label for="java">Java</label><br>
+
+        <input type="radio" id="python" name="lenguaje" value="lenguajepython">
+        <label for="python">Python</label><br>
+
+        <input type="radio" id="html" name="lenguaje" value="lenguajehtml">
+        <label for="html">HTML</label><br>
+
+        <input type="radio" id="visual_basic" name="lenguaje" value="lenguajevisual_basic">
+        <label for="visual_basic">Visual Basic</label>
+        <br><br>
+
+        <label for="archivo1">Elija un fichero:</label>
+        <input type="file" id="archivo1" name="archivo1">
+        <br><br>
+
+        <label for="fecha">Elija una fecha:</label>
+        <input type="date" id="fecha" name="fecha">
+        <br><br>
+
+        <label for="color1">Elija un color:</label>
+        <input type="color" id="color1" name="color1">
+        <br><br>
+        </fieldset>
+        
+        <fieldset>
+        <legend>Rellene las siguientes opciones:</legend>
+        <input type="checkbox" id="intel" name="procesador" value="procesadorintel">
+        <label for="intel">Intel</label><br>
+
+        <input type="checkbox" id="amd" name="procesador" value="procesadoramd">
+        <label for="amd">AMD</label>
+        <br><br>
+
+        <label for="hora2">Elije una hora:</label>
+        <input type="time" id="hora2" name="hora2">
+        <br><br>
+
+        <label for="archivo2">Elija un fichero:</label>
+        <input type="file" id="archivo2" name="archivo2">
+        <br><br>
+
+        <p>Seleccione un procesador:</p>
+        <input type="radio" id="amd_radio" name="procesador_radio" value="procesadoramd">
+        <label for="amd_radio">AMD</label>
+
+        <input type="radio" id="intel_i5" name="procesador_radio" value="procesadorintel_i5">
+        <label for="intel_i5">Intel i5</label>
+
+        <input type="radio" id="intel_i7" name="procesador_radio" value="procesadorintel_i7">
+        <label for="intel_i7">Intel i7</label>
+        <br><br>
+
+        <label for="recuadro">Recuadro:</label><br>
+        <textarea id="recuadro" name="recuadro" rows="4" cols="55">Utilice este recuadro por favor</textarea>
+        <br><br>
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni">
+        <br><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <br><br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos">
+        <br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono">
+        <br><br>
+
+        <label for="color2">Color:</label>
+        <input type="color" id="color2" name="color2">
+        <br><br>
+
+        <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+
 </body>
 </html>
