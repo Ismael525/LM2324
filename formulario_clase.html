@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario trabajo clase</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Formulario de pago:</legend>
+        <fieldset>
+            <legend>Informacion de contacto</legend>
+            <fieldset>
+                <legend>Profesion</legend>
+                <input type="radio" id="profesion" name="profesion" value="profesion">
+                <label for="html">Profesor</label><br>
+                <input type="radio" id="profesion" name="profesion" value="profesion">
+                <label for="html">Alumno</label><br>
+                <input type="radio" id="profesion" name="profesion" value="profesion">
+                <label for="html">Otro</label><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Tratamiento</legend><br>
+                    <input type="radio" id="Sr/Sra" name="Sr/Sra" value="Sr/Sra">
+                    <label for="html">Sr/Sra</label><br>
+                    <input type="radio" id="Sr/Sra" name="Sr/Sra" value="Sr/Sra">
+                    <label for="html">Dr/Dra</label><br>
+                    <input type="radio" id="Sr/Sra" name="Sr/Sra" value="Sr/Sra">
+                    <label for="html">Otro</label><br>
+        </fieldset>
+        <label for="">Nombre</label><br>
+        <input tpye="text" name="Nombre"><br>
+        <label for="">Correo</label><br>
+        <input tpye="text" name="Nombre"><br>
+        <label for="">Numero de telefono</label><br>
+        <input tpye="text" name="Nombre"><br>
+        <label for="Contraseña">Contraseña:</label><br>
+        <input type="password" id="Contraseña" name="Contraseña"><br><br>
+    </fieldset>
+        <fieldset>
+            <legend>Informacion de pago:</legend>
+            <label for="">Numero de tarjeta</label><br>
+            <input tpye="text" name="Numero de tarjeta"><br>
+            <label for="Fecha">Fecha de caducidad</label><br>
+            <input type="date" name="Fecha"><br>
+            <label for="">Cuenta de paypal</label><br>
+            <input tpye="text" name="Cuenta de paypal"><br>
+            <p>Método de pago</p>
+             <select id="Conector" name="Conector">
+                <option value="Tarjeta de credito">Tarjeta de credito</option>
+                <option value="Paypal">Paypal</option>
+                </select>
+        </fieldset>
+        <input type="submit" value="Validar el pago">
+</body>
+</html>
