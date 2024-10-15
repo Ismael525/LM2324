@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1</title>
+</head>
+<body>
+    <p>Rellenar</p>
+    <form>
+
+        <fieldset> <!--Fieldset indica el rango y legend pone las lineas-->
+            <legend>Rellenar:</legend>
+            <!--Botones radio, Solo podemos elegir uno-->
+            <input type="radio" id="idiomaalemania" name="idioma" value="idiomaalemania">
+            <label for="html">Alemania</label><br>
+            <input type="radio" id="idiomaingles" name="idioma" value="idiomaingles">
+            <label for="css">Ingles</label><br>
+            <input type="radio" id="idiomafrances" name="idioma" value="idiomafrances">
+            <label for="javascript">Frances</label>
+            <br>
+        <!--Desplegable-->
+        <select id="Conector" name="Conector">
+            <option value="USB">USB</option>
+            <option value="Paralelo">Paralelo</option>
+            <option value="PS2">PS2</option>
+            </select>
+        <br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Indique sus preferencias porfavor:</legend>
+        <select name="" id="" size="4">
+            <option value="mujer">Mujer</option>
+            <option value="hombre">Hombre</option>
+        </select>
+        <br>
+            <!--Cajas de texto-->
+        <label for="">Nombre</label>
+        <input tpye="text" name="Nombre">
+        <br>
+        <label for="">Apellidos</label>
+        <input tpye="text" name="Apellidos">
+        <br>
+        <!--Casillas de verificacion en las cuales podemos elegir mas de una-->
+        <input type="checkbox" name="mujer" id="">Mujer<br>
+        <input type="checkbox" name="hombre" id="">Hombre<br>
+        <label for="">Elija una fecha:</label>
+       <!--Caja de fecha-->
+        <input type="date" name="fecha" id="" value="dd/mm/aaaa">
+        <br>
+        </fieldset>
+        
+
+    </form> 
+</body>
+</html>
