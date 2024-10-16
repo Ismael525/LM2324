@@ -1,0 +1,9 @@
+/*
+    Estilo de mi pagina web.
+    Realizado por Ismael Sánchez
+*/
+p {
+        font-size: 200%;
+        color: red;
+        text-indent: 30px; /*Indentacion de los parraofos*/
+}
