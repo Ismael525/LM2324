@@ -1,0 +1,13 @@
+h2 {
+    text-align: center;
+}
+
+.parrafo {
+    color: blue; 
+    font-size: 16px; 
+}
+
+#especial {
+    color: red; 
+    font-weight: bold; 
+}

@@ -1,0 +1,14 @@
+div p {
+    color: darkred;
+    font-size: 18px;
+}
+
+h3.resaltado {
+    background-color: yellow;
+    font-style: italic;
+}
+
+p {
+    color: darkred;
+    font-size: 18px;
+}
