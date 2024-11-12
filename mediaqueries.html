@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende HTML y CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3b2b26;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .content {
+            flex: 3;
+            padding-right: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0 0 10px;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sidebar button {
+            background-color: #9aa8a3;
+            color: #333;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        .sidebar button:hover {
+            background-color: #b3c2bd;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .content {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .sidebar {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            .sidebar button {
+                flex: 1;
+                min-width: 48%;
+            }
+        }
+
+        @media print {
+            .sidebar {
+                display: none;
+            }
+
+            body {
+                font-family: serif;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Aprende HTML y CSS</h1>
+            <p>Redimensiona la pantalla para visualizarla en diferentes tamaños. Observa como cambia el menú para adaptarse a los diferentes tamaños de pantalla.</p>
+            <p>Pulsa imprimir la página para ver la previsualización, observa cómo cambia la tipografía y desaparece el menú.</p>
+        </div>
+        <div class="sidebar">
+            <button>W3Schools</button>
+            <button>Aprende HTML</button>
+            <button>Aprende CSS</button>
+            <button>Referencia Mozilla</button>
+            <button>Trucos CSS</button>
+        </div>
+    </div>
+</body>
+</html>
