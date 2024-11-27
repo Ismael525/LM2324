@@ -2,42 +2,50 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <header>
-        <h1>Crea tu personaje</h1>
-    </header>
-    <form action="">
-        <fieldset>
-            <legend>Porfavor rellena este formulario</legend>
-            <div>
-                <label for="">Nombre</label>
-                <input type="text" placeholder="Escribe el nombre de tu personaje..."><br>
-                <label for="">¿Tiene poderes especiales?</label>
-                <input type="checkbox" name="" id=""><br>
-                <label for="">Color favorito</label>
-                <input type="color"><br>
-                <label for="">Descripcion del mismo</label>
-                <input type="text"><br>
-                <label for="">Email de su tribu</label>
-                <input type="email"><br>
-                <label for="">Nacimiento</label>
-                <input type="date"><br>
-                <label for="">Bando</label>
-                <select name="" id="">
-                    <option value="">Buenos</option>
-                    <option value="">Malvados</option>
-                </select><br>
-                <label for="">Historia del personaje</label>
-                <textarea name="" id="" placeholder="Puntos debiles..."></textarea><br>
-                <label for="">Imagen</label>
-                <input type="file"><br>
-                <input type="button" value="Crear">
-            </div>
-        </fieldset>
+    <header><h1>Crea tu personaje</h1></header>
+    <form action="#" method="post" enctype='multipart/form-data'>
+      <fieldset>
+        <legend>Por favor rellena este formulario.</legend>
+        <div>
+          <label for="name">Nombre</label>
+          <input id="name" type="text" name="class" placeholder="Escribe el nombre de tu personaje...">
+  
+          <label for="colorfavorito">¿Tiene poderes especiales?</label>
+          <input id="colorfavorito" type="checkbox" name="locks">
+          
+          <label for="colour">Color favorito</label>
+          <input type="color" name="colour">
+          
+  <label for="desc">Descripción del mismo</label>
+  
+  <input type="text" name="" id="desc">
+  
+          <label for="date">Email de su tribu</label>
+          <input type="email" name="email">
+  
+          
+          <label for="date">Nacimiento</label>
+          <input type="date" name="date">
+  
+          <label for="bando">Bando</label>
+          <select name="bando" id="bando">
+            <option value="buenos">Buenos</option>
+            <option value="malvados">Malvados</option>
+          </select>
+  
+          <label class="span2" for="story">Historia del personaje</label>
+          <textarea class="span2" name="story" id="story" cols="30" rows="10" placeholder="Puntos débiles..."></textarea>
+          <label for="file">Imagen</label>
+          <input id="file" type="file" name="my-file" enctype='multipart/form-data'>
+          <input type="submit" value="Crear">
+        </div>
+      </fieldset>
     </form>
 </body>
 </html>
