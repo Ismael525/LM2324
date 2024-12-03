@@ -11,7 +11,7 @@
     height: 100vh;
   }
   
-  .header {
+  header {
     background-color: #ffd100;
     padding: 20px;
     text-align: center;
@@ -83,14 +83,14 @@
       cursor:help;
       color:#ffd100
   }
-  .footer {
+  footer {
     background-color: #ffd100;
     padding: 10px;
     text-align: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
-  .footer a{
+  footer a{
       color:black;
   }
   @media (max-width: 768px) {
