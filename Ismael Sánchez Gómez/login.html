@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario responsive con animacion</title>
+    <style>
+        
+        body{
+            font-family: 'Roboto',sans-serif;
+            background-image: linear-gradient(#6d83f2 , #bad4f3);
+            color: #333;
+            min-height: 100vh;
+            flex: auto;
+        }
+
+        form {
+            grid-column: 1fr;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 25px;
+            max-width: 600px;
+            width: 90%;
+            padding: 2.5rem;
+            grid-column-gap: 1rem;
+            }
+
+        #encabezado{
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #444;
+            border-inline: 2px #ccc;
+            padding: 1rem;
+        }
+
+        #correo{
+            padding: 1rem;
+            border: dashed 2px #ddd;
+        }
+
+        #contraseña{
+            padding: 1rem;
+            border: dashed 2px #ddd;
+        }
+
+        label{
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        input{
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 5px;
+            border: solid 2px #ddd;
+        }
+
+        #enlaces{
+            flex: auto;
+            margin: 20px;
+            padding: 1rem;
+            border: dashed 2px #ddd;
+            font-size: 0.85rem;
+            color: #6d83f2;
+            text-decoration: none;
+        }
+
+        #enlaces:hover{
+            color: #5066c5;
+        }
+
+        #correo:focus {
+            outline: 3px solid #ffda44;
+        }
+
+        #contraseña:focus {
+            outline: 3px solid #ffda44;
+        }
+
+        button{
+            border: 5px;
+            background-color: #6d83f2;
+            color:white;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <form action="#" method="post" enctype='multipart/form-data'>
+        <fieldset>
+        <div class="rejilla">
+        <div class="encabezado"><p>Inicia sesion</p><br></div>
+         <div class="correo">
+        <label for="correo">Correo electronico</label>
+          <input id="correo" type="email" name="class">
+        </div> 
+        <div class="contraseña">
+          <label for="contraseña">Contraseña</label>
+          <input id="contraseña" type="password" name="locks">
+        </div>
+        <div class="enlaces">
+            <a href="#">¿Necesitas ayuda?</a>
+            <a href="#">Darse de alta</a>
+        </div>
+        <div class="sesion">
+            <button>Iniciar sesion</button>
+            <button>Darse de alta</button>
+        </div>
+        </div>
+        </fieldset>
+</body>
+</html>
