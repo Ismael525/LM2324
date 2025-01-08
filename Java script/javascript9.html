@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript 9</title>
+<meta charset="UTF-8">
+</head>
+<body>
+    <h1>Escribe tu nombre</h1>
+    <input id="entradaTexto" type="textbox">
+    <button onclick="saludo()">Login</button>
+    <script>
+        function saludo() {
+        var cadena;
+        cadena = document.getElementById("entradaTexto").value;
+        alert('Bienvenido '+cadena);
+        }
+    </script>
+</body>
+</html>
