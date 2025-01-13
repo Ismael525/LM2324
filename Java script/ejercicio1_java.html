@@ -1,0 +1,103 @@
+Ir al contenido principal
+Google ClassroomClassroom
+1º CFGS - LMSGI 2024/25LM - 2024/25
+Inicio
+Calendar
+Cursos en los que te has inscrito
+Tareas pendientes
+F
+FP Dual 24/25 1º Ciclo
+D
+Digitalización aplicada a los sectores productivos
+1º ASIR - Alejandro - 2024-2025
+F
+Fundamentos del hardware
+1º ASIR - Alejandro - 2024-2025
+S
+Sostenibilidad aplicada al sistema productivo
+1º ASIR - Alejandro - 2024-2025
+R
+Redes 24/25
+I
+ISO - Implantación de Sistemas Operativos
+1º CFGS - Curso 2024/25
+1
+1º CFGS - LMSGI 2024/25
+LM - 2024/25
+B
+Base de Datos 24_25
+1CFGS. Para ver los trabajos por tema ir a la pestaña "TRABAJO DE CLASE"
+Clases archivadas
+Ajustes
+Solución ejercicio del login con Javascript
+Solución ejercicio del login con Javascript
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Usuario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .contenedor {
+      text-align: center;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    input {
+      margin: 5px 0;
+      padding: 8px;
+      width: 200px;
+    }
+    #mensaje {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Login</h1>
+    <!-- Prescindo de <form> </form> porque realmente no voy a enviar nada -->
+      <input type="text" id="usuario" placeholder="Usuario" required><br>
+      <input type="password" id="contraseña" placeholder="Contraseña" required><br>
+      <button onclick="login()">Enviar</button><!-- Utilizo evento onclick para llamar a la función -->
+    <div id="mensaje"></div>
+  </div>
+
+  <script>
+    function login(){
+      let usuario = document.getElementById('usuario').value;
+      let pass = document.getElementById('contraseña').value;
+      let mensaje = `Bienvenido usuario ${usuario} con la contraseña ${pass}`;
+      document.getElementById('mensaje').textContent = mensaje;
+    }
+  </script>
+</body>
+</html>
+
+login1.html
+Mostrando login1.html.
+Solución ejercicio del login con Javascript
+José Luis Núñez
+•
+9 ene
+Revisa el código de login1.html y login2.html.
+Ambas son soluciones que funcionan para el ejercicio planteado pero con dos aproximaciones distintas.
+Realizad los dos siguientes ejercicios para el próximo día: conversión de monedas y conversión de grados.
+login2.html
+HTML
+login1.html
+HTML
+Comentarios de la clase
+Añade un comentario de clase…
+
