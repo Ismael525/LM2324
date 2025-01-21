@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expediente Académico</title>
+</head>
+<body>
+    <h1>Expediente Académico</h1>
+    <div>
+        <label>Calificación del módulo 1:</label>
+        <input type="number" id="modulo1" min="0" max="10">
+    </div>
+    <div>
+        <label>Calificación del módulo 2:</label>
+        <input type="number" id="modulo2" min="0" max="10">
+    </div>
+    <div>
+        <label>Calificación del módulo 3:</label>
+        <input type="number" id="modulo3" min="0" max="10">
+    </div>
+    <button onclick="calcularExpediente()">Calcular Expediente</button>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularExpediente() {
+            var mod1 = parseFloat(document.getElementById('modulo1').value) || 0;
+            var mod2 = parseFloat(document.getElementById('modulo2').value) || 0;
+            var mod3 = parseFloat(document.getElementById('modulo3').value) || 0;
+
+            var calificaciones = [mod1, mod2, mod3];
+            var aprobados = calificaciones.filter(c => c >= 5).length;
+            var suspensos = calificaciones.filter(c => c < 5).length;
+            var media = (mod1 + mod2 + mod3) / 3;
+
+            var resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = `
+                <p>Aprobados: ${aprobados}</p>
+                <p>Suspensos: ${suspensos}</p>
+                <p>Media: ${media.toFixed(2)}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

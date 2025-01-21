@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula la Hipotenusa</title>
+</head>
+<body>
+    <h2>Calcula la Hipotenusa de un Triángulo Rectángulo</h2>
+    <form id="triangle-form">
+        <label for="cateto1">Longitud del primer cateto (cateto1):</label>
+        <input type="number" id="cateto1" step="0.01" placeholder="Ejemplo: 3.5" required><br>
+        <label for="cateto2">Longitud del segundo cateto (cateto2):</label>
+        <input type="number" id="cateto2" step="0.01" placeholder="Ejemplo: 4.2" required><br>
+        <button type="button" onclick="calcularHipotenusa()">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularHipotenusa() {
+            let cateto1 = parseFloat(document.getElementById('cateto1').value);
+            let cateto2 = parseFloat(document.getElementById('cateto2').value);
+
+            // Validar que ambos catetos sean números positivos
+            if (isNaN(cateto1) || isNaN(cateto2) || cateto1 <= 0 || cateto2 <= 0) {
+                document.getElementById('resultado').innerHTML = "Por favor, introduce valores válidos y mayores a 0.";
+                return;
+            }
+
+            // Calcular la hipotenusa usando el Teorema de Pitágoras
+            let hipotenusa = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
+
+            // Mostrar el resultado en pantalla
+            document.getElementById('resultado').innerHTML = `La longitud de la hipotenusa es: ${hipotenusa.toFixed(2)} unidades.`;
+        }
+    </script>
+</body>
+</html>
