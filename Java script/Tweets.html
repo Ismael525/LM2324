@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Aplicación de Tweets</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f8fa;
+      text-align: center;
+    }
+    .container {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 500px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #1DA1F2;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #1DA1F2;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #0d8bcd;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background-color: #e1e8ed;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .tweet-text {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .tweet-text i {
+      color: #1DA1F2;
+      font-size: 20px;
+    }
+    .delete-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: #ff4d4d;
+      font-size: 18px;
+    }
+    .delete-btn:hover {
+      color: #d93636;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mini Aplicación de Tweets</h1>
+    <input type="text" id="tweetInput" placeholder="Escribe tu tweet aquí..." maxlength="280">
+    <button onclick="addTweet()">Añadir Tweet</button>
+    <ul id="tweetList"></ul>
+  </div>
+
+  <script>
+    // Función para añadir un tweet
+    function addTweet() {
+      const tweetInput = document.getElementById('tweetInput');
+      const tweetText = tweetInput.value.trim();
+
+      if (tweetText === '') {
+        alert('Por favor, escribe un tweet.');
+        return;
+      }
+
+      // Crear un elemento de lista para el nuevo tweet
+      const li = document.createElement('li');
+
+      // Contenedor del texto y el icono de Twitter
+      const tweetContent = document.createElement('div');
+      tweetContent.className = 'tweet-text';
+
+      const twitterIcon = document.createElement('i');
+      twitterIcon.className = 'fab fa-twitter'; // Ícono de Twitter
+
+      const tweetSpan = document.createElement('span');
+      tweetSpan.textContent = tweetText;
+
+      tweetContent.appendChild(twitterIcon);
+      tweetContent.appendChild(tweetSpan);
+
+      // Botón para borrar el tweet
+      const deleteButton = document.createElement('button');
+      deleteButton.className = 'delete-btn';
+      deleteButton.innerHTML = '<i class="fas fa-trash"></i>'; // Ícono de basura
+      deleteButton.onclick = () => {
+        li.remove();
+      };
+
+      // Añadir contenido al elemento de lista
+      li.appendChild(tweetContent);
+      li.appendChild(deleteButton);
+
+      // Añadir el tweet a la lista
+      const tweetList = document.getElementById('tweetList');
+      tweetList.appendChild(li);
+
+      // Limpiar el campo de entrada
+      tweetInput.value = '';
+    }
+  </script>
+</body>
+</html>
