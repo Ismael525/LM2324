@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Factorial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .container {
+      display: inline-block;
+      padding: 20px;
+      border: 2px solid #007BFF;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Factorial</h1>
+    <label for="numero">Introduce un número entero positivo:</label><br>
+    <input type="number" id="numero" min="0" placeholder="Escribe un número"><br>
+    <button onclick="calcularFactorial()">Calcular Factorial</button>
+    <div class="result" id="resultado"></div>
+  </div>
+
+  <script>
+    function calcularFactorial() {
+      // Obtener el valor introducido por el usuario
+      const numero = document.getElementById("numero").value;
+
+      // Validar que el número es un entero positivo
+      if (numero === "" || parseInt(numero) < 0) {
+        document.getElementById("resultado").textContent = "Por favor, introduce un número entero positivo.";
+        return;
+      }
+
+      // Convertir a entero
+      const n = parseInt(numero);
+
+      // Calcular el factorial
+      let factorial = 1;
+      for (let i = 1; i <= n; i++) {
+        factorial *= i;
+      }
+
+      // Mostrar el resultado
+      document.getElementById("resultado").textContent = `El factorial de ${n} es ${factorial}.`;
+    }
+  </script>
+</body>
+</html>

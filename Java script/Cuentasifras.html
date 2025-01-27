@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Cifras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .container {
+      display: inline-block;
+      padding: 20px;
+      border: 2px solid #4CAF50;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contador de Cifras</h1>
+    <label for="numero">Introduce un número entero positivo:</label><br>
+    <input type="number" id="numero" min="0" placeholder="Escribe un número"><br>
+    <button onclick="contarCifras()">Calcular Cifras</button>
+    <div class="result" id="resultado"></div>
+  </div>
+
+  <script>
+    function contarCifras() {
+      // Obtener el valor introducido por el usuario
+      const numero = document.getElementById("numero").value;
+
+      // Validar que el número es un entero positivo
+      if (numero === "" || parseInt(numero) < 0) {
+        document.getElementById("resultado").textContent = "Por favor, introduce un número entero positivo.";
+        return;
+      }
+
+      // Contar las cifras del número
+      const cifras = numero.length;
+
+      // Mostrar el resultado
+      document.getElementById("resultado").textContent = `El número ${numero} tiene ${cifras} cifra(s).`;
+    }
+  </script>
+</body>
+</html>
