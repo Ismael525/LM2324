@@ -83,15 +83,15 @@
   <div class="container">
     <h1>Mini Aplicación de Tweets</h1>
     <input type="text" id="tweetInput" placeholder="Escribe tu tweet aquí..." maxlength="280">
-    <button onclick="addTweet()">Añadir Tweet</button>
+    <button onclick="AnadirTweet()">Añadir Tweet</button>
     <ul id="tweetList"></ul>
   </div>
 
   <script>
     // Función para añadir un tweet
-    function addTweet() {
-      const tweetInput = document.getElementById('tweetInput');
-      const tweetText = tweetInput.value.trim();
+    function AnadirTweet() {
+      var tweetInput = document.getElementById('tweetInput');
+      var tweetText = tweetInput.value.trim();
 
       if (tweetText === '') {
         alert('Por favor, escribe un tweet.');
@@ -99,23 +99,23 @@
       }
 
       // Crear un elemento de lista para el nuevo tweet
-      const li = document.createElement('li');
+      var li = document.createElement('li');
 
       // Contenedor del texto y el icono de Twitter
-      const tweetContent = document.createElement('div');
+      var tweetContent = document.createElement('div');
       tweetContent.className = 'tweet-text';
 
-      const twitterIcon = document.createElement('i');
+      var twitterIcon = document.createElement('i');
       twitterIcon.className = 'fab fa-twitter'; // Ícono de Twitter
 
-      const tweetSpan = document.createElement('span');
+      var tweetSpan = document.createElement('span');
       tweetSpan.textContent = tweetText;
 
       tweetContent.appendChild(twitterIcon);
       tweetContent.appendChild(tweetSpan);
 
       // Botón para borrar el tweet
-      const deleteButton = document.createElement('button');
+      var deleteButton = document.createElement('button');
       deleteButton.className = 'delete-btn';
       deleteButton.innerHTML = '<i class="fas fa-trash"></i>'; // Ícono de basura
       deleteButton.onclick = () => {
@@ -127,7 +127,7 @@
       li.appendChild(deleteButton);
 
       // Añadir el tweet a la lista
-      const tweetList = document.getElementById('tweetList');
+      var tweetList = document.getElementById('tweetList');
       tweetList.appendChild(li);
 
       // Limpiar el campo de entrada
