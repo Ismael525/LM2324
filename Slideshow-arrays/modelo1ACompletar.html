@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IES Isbilya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+ <table border="0" cellpadding="0">
+     <h1>IES Isbilya</h1>
+  <tr>
+    <td width="100%"><img src="s1.jpg" id="fotoActual"></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <form>
+      <div align="center">
+          
+          
+          <input type="button" value="Atrás" onClick="atras()">
+          <input type="button" value="Siguiente" onClick="siguiente()">
+          <br>
+      
+        </div>
+    </form>
+    </td>
+  </tr>
+</table>  
+          <script>
+            var fotos=new Array();
+            var indice=0 /* Inicializamos el indice del Array */
+            var totalFotos;
+            fotos[0]="s0.jpg";
+            fotos[1]="s1.jpg";
+            fotos[2]="s2.jpg";
+            fotos[3]="s3.jpg";
+            fotos[4]="s4.jpg";
+            function atras(){
+                if (indice!=0) { /* Si NO era la primera foto... */
+                    indice=indice-1;
+                }
+                else
+                {
+                    indice= fotos.lenght-1; /* Ponemos la ultima foto */       
+                }
+                document.getElementById("fotoActual").src = "s"+indice+".jpg";
+            }
+            function siguiente(){
+                totalFotos = fotos.length;
+                if (indice==totalFotos-1){
+                    indice=0; /* Empezamos de nuevo */
+                }
+                else
+                {
+                    indice=indice+1;        
+                }
+                document.getElementById("fotoActual").src = "s"+indice+".jpg" ; /* Ponemos el nombre del fichero */
+            }
+</script>
+        
+</body>
+</html>

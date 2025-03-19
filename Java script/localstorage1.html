@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de localstorage</title>
+</head>
+<body>
+   <p id="inicio"></p>
+    <input type="text" id="texto">
+    <button id="guardar" onclick="guardar()">Guardar</button>
+    <button onclick="limpiar()">Limpiar</button>
+    <script>
+        function limpiar() {
+            localStorage.clear();
+            document.getElementById("inicio").innerHTML = "";
+        }
+        function guardar() {
+            localStorage.setItem("texto",document.getElementById("texto").value);
+        }
+        window.onload = function(){
+            if(localStorage.getItem("texto") != null){
+                document.getElementById("inicio").innerHTML = localStorage.getItem("texto");
+            }
+        }
+    </script>
+</body>
+</html>
