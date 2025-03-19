@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <input type="text" id="n" placeholder="Introduce un número entero positivo"><br>
+    <button onclick="calcularSerie()">¡Calcular!</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularSerie() {
+            let n = parseInt(document.getElementById("n").value); // 1er hueco: Obtener el valor del input y convertirlo a número
+            let resultado = document.getElementById("resultado");
+
+            if (isNaN(n) || n < 1) { // 2º hueco: Comprobar si el número es inválido o menor que 1
+                resultado.innerHTML = "Introduce un número entero positivo.";
+                return;
+            }
+
+            let serie = [0, 1]; // 3er hueco: Definir los dos primeros términos de la secuencia
+            for (let i = 2; i < n; i++) {
+                serie.push(serie[i - 1] + serie[i - 2]); // 4º hueco: Calcular el siguiente término sumando los dos anteriores
+            }
+
+            resultado.innerHTML = serie.slice(0, n).join(" "); // 5º hueco: Mostrar la serie separada por espacios
+        }
+    </script>
+</body>
+</html>

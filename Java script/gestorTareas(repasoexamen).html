@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <script>
+        let tareas = [];
+        
+        function agregarTarea() {
+            let tarea = document.getElementById('nuevaTarea').value.trim();
+            if (tarea === "") {
+                alert("La tarea no puede estar vacía.");
+                return;
+            }
+            tareas.push(tarea);
+            actualizarLista();
+        }
+        
+        function eliminarTarea() {
+            if (tareas.length > 0) {
+                tareas.pop();
+                actualizarLista();
+            } else {
+                alert("No hay tareas para eliminar.");
+            }
+        }
+        
+        function buscarTarea() {
+            let tareaBuscada = document.getElementById('buscarTarea').value.trim();
+            if (tareaBuscada === "") {
+                alert("Ingrese una tarea para buscar.");
+                return;
+            }
+            let index = tareas.indexOf(tareaBuscada);
+            alert(index !== -1 ? "Tarea encontrada en la lista." : "Tarea no encontrada.");
+        }
+        
+        function actualizarLista() {
+            document.getElementById('listaTareas').innerHTML = tareas.map(t => `<li>${t}</li>`).join('');
+        }
+    </script>
+</head>
+<body>
+    <h2>Gestor de Tareas</h2>
+    <input type="text" id="nuevaTarea" placeholder="Ingrese una tarea">
+    <button onclick="agregarTarea()">Agregar Tarea</button>
+    <button onclick="eliminarTarea()">Eliminar Última Tarea</button>
+    <br><br>
+    <input type="text" id="buscarTarea" placeholder="Buscar tarea">
+    <button onclick="buscarTarea()">Buscar</button>
+    <br><br>
+    <ul id="listaTareas"></ul>
+</body>
+</html>
