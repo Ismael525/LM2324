@@ -10,17 +10,24 @@
     <h1>Introduccion a jQuery</h1>
     <p>Esto es un parrafo de ejemplo para ver que hace jQuery</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium culpa vero amet distinctio quos quae optio totam quisquam. Ex repellat nulla ipsam maxime. Quo impedit voluptatum ut nam, fuga nemo!</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nihil quibusdam iure asperiores! Delectus placeat necessitatibus quo nesciunt dolores earum id sunt exercitationem fugiat architecto, commodi repellat aspernatur tempora ut.</p>
+    <p class="test">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nihil quibusdam iure asperiores! Delectus placeat necessitatibus quo nesciunt dolores earum id sunt exercitationem fugiat architecto, commodi repellat aspernatur tempora ut.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo reiciendis commodi laborum nobis tempore quos cum, cupiditate nam illo sed, asperiores impedit eligendi ratione eius aliquid, dignissimos doloremque similique fuga!</p>
     <button id="boton">Click aqui</button>
-    <script>
-    
-            
-        $("botton").click(function()
-        {
-        $("p").hide();
-        })
+    <button id="boton2">Click aqui</button>
 
+    <script>
+        $(function () {
+            $("#boton").click(function() {
+                $("p").hide();
+                $("h1").hide();
+            })
+
+            $("#boton2").click(function() {
+                $("p").show();
+                $("h1").show();
+            })
+
+        });
     </script>
 </body>
 </html>
