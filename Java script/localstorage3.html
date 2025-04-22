@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+</head>
+<body>
+    <input type="text" id="entrada" placeholder="Ingrese una Tarea">
+    <button onclick="agregarTarea()">Agregar Tarea</button>
+    <p id="tareas"></p>
+    <ul id="listaTareas"></ul>
+
+
+    <script>        
+        let ArrayTareas = [];
+        
+        function agregarTarea() {
+            let entrada = document.getElementById("entrada").value;
+            ArrayTareas.push(entrada);
+            if (entrada!="") {
+                localStorage.setItem("tareas", JSON.stringify(ArrayTareas));
+                document.getElementById("tareas").innerHTML = entrada;
+            }
+        }
+            
+
+        function guardarNombres() {
+            const ArrayTareas = JSON.parse(localStorage.getItem("tareas"))
+            if (tareas != null) {
+                document.getElementById("tareas").innerHTML = tareas;
+            }
+            else{
+                document.getElementById("tareas").innerHTML = "No hay tareas";
+            }
+        }
+
+        function actualizarLista() {
+            document.getElementById('listaTareas').innerHTML = tareas.map(t => `<li>${t}</li>`).join('');
+        }
+        
+        window.onload = guardarNombres;
+    </script>
+</body>
+</html>

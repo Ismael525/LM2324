@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito Pago</title>
+  <link rel="stylesheet" href="Carrito_Pago.css">
+  <script src="Carro_Pago.js"></script>
+  <style>
+
+  </style>
+</head>
+<body>
+  <form id="formulario-pago" onsubmit="manejarEnvio(event)">
+    <h4>Check Out</h4>
+    <fieldset>
+      <legend>Información de contacto</legend>
+      <label for="nombre">Nombre: *</label>
+      <input type="text" name="nombre" id="nombre" required>
+
+      <label for="correo">Correo: *</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="telefono">Número de teléfono de contacto: *</label>
+      <input type="tel" name="telefono" id="telefono" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Método de pago</legend>
+      <label for="tarjeta">Número de tarjeta: *</label>
+      <input type="text" name="tarjeta" id="tarjeta" required oninput="actualizarTipoTarjeta()">
+      <div id="tipo-tarjeta" class="tipo-tarjeta"></div>
+
+      <label for="caducidad">Fecha de caducidad: *</label>
+      <input type="date" name="caducidad" id="caducidad" required>
+
+      <label for="cvv">CVV de tarjeta:</label>
+      <input type="text" name="cvv" id="cvv" maxlength="4" inputmode="numeric" required>
+    </fieldset>
+
+    <button type="submit">Finalizar compra</button>
+  </form>
+
+  <div id="mensaje-exito">¡Gracias por tu compra!</div>
+</body>
+</html>

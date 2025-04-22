@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  form {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+  }
+
+  h4 {
+    color: #e6550d;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid #e6550d;
+    padding-bottom: 10px;
+  }
+
+  fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  legend {
+    font-weight: bold;
+    color: #e6550d;
+    padding: 0 10px;
+  }
+
+  label {
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+
+  input:focus {
+    border-color: #e6550d;
+    outline: none;
+  }
+
+  button {
+    background-color: #e6550d;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  button:hover {
+    background-color: #c94c0b;
+  }
+
+  .tipo-tarjeta {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #444;
+  }
+
+  #mensaje-exito {
+    display: none;
+    text-align: center;
+    font-size: 28px;
+    color: #e6550d;
+    font-weight: bold;
+    margin-top: 100px;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }

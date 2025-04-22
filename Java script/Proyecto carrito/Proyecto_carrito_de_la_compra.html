@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de la compra</title>
+  <link rel="stylesheet" href="carrito.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <h2>Carrito de la compra</h2>
+
+  <div class="products-container">
+    <div class="card" data-producto="raton">
+      <img src="raton.png" alt="Ratón inalámbrico">
+      <div class="container">
+        <div>
+          <h4><b>Uineer Ratón Inalámbrico</b></h4>
+          <p>Ratón inalámbrico recargable, ergonómico, con DPI ajustable y conexión USB plug and play. Compatible con Windows, Mac y Linux.</p>
+          <div class="price">Precio: 15.99 €</div>
+        </div>
+        <div class="controls">
+          <button onclick="modificarCantidad('raton', -1)">-</button>
+          <span class="quantity" id="raton-cantidad">0</span>
+          <button onclick="modificarCantidad('raton', 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-producto="teclado">
+      <img src="tecladinho.png" alt="Teclado Logitech">
+      <div class="container">
+        <div>
+          <h4><b>Logitech K120 Teclado con Cable</b></h4>
+          <p>Teclado USB cómodo, resistente y de perfil plano, con patas ajustables e instalación plug and play. Compatible con Windows y Linux.</p>
+          <div class="price">Precio: 11.49 €</div>
+        </div>
+        <div class="controls">
+          <button onclick="modificarCantidad('teclado', -1)">-</button>
+          <span class="quantity" id="teclado-cantidad">0</span>
+          <button onclick="modificarCantidad('teclado', 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-producto="monitor">
+      <img src="monitor.png" alt="Monitor LG">
+      <div class="container">
+        <div>
+          <h4><b>LG 22MR410-B - Monitor Full HD, 22"</b></h4>
+          <p>Monitor LG con panel VA, AMD FreeSync, diseño sin bordes, estabilizador de negros y tecnología Super Resolution+ para mejor imagen y experiencia inmersiva.</p>
+          <div class="price">Precio: 119.00 €</div>
+        </div>
+        <div class="controls">
+          <button onclick="modificarCantidad('monitor', -1)">-</button>
+          <span class="quantity" id="monitor-cantidad">0</span>
+          <button onclick="modificarCantidad('monitor', 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-producto="grafica">
+      <img src="grafica.jpeg" alt="Tarjeta gráfica">
+      <div class="container">
+        <div>
+          <h4><b>MSI GeForce RTX 4060 Ventus 2X</b></h4>
+          <p>Tarjeta gráfica con 8 GB GDDR6, ideal para gaming y creación de contenido. Soporte para Ray Tracing y DLSS 3.</p>
+          <div class="price">Precio: 299.00 €</div>
+        </div>
+        <div class="controls">
+          <button onclick="modificarCantidad('grafica', -1)">-</button>
+          <span class="quantity" id="grafica-cantidad">0</span>
+          <button onclick="modificarCantidad('grafica', 1)">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="total-container">
+   
+  </div>
+
+  <div class="summary-list" id="resumen-productos">
+    <h3>Resumen del carrito:</h3>
+    <h4>Total del carrito: <span id="total-precio">0.00 €</span></h4>
+    <button id="checkout-button" disabled onclick="irACompra()">Ir al checkout</button>
+    <div id="detalle-productos">
+      <p>No hay productos añadidos aún.</p>
+    </div>
+  </div>
+  
+</body>
+</html>
