@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 6</title>
+    <script src="jquery-3.7.1.js"></script> <!--Inclusion de jQuery-->
+</head>
+<body>
+    <h1>Titulo 1</h1>
+    <p>Parrafo 1</p>
+    <p>Parrafo 2</p>
+    <img src="https://picsum.photos/200/300">
+    <a href="https://www.google.com">Google</a>
+    <h1>Titulo 2</h1>
+    <p>Parrafo 3</p>
+    <p>Parrafo 4</p>
+    <img src="https://picsum.photos/200/300">
+    <a href="https://www.google.com">Google</a>
+    <h1>Titulo 3</h1>
+    <p>Parrafo 5</p>
+    <p>Parrafo 6</p>
+    <img src="https://picsum.photos/200/300">
+    <a href="https://www.google.com">Google</a>
+    <h1>Titulo 4</h1>
+    <p>Parrafo 7</p>
+    <p>Parrafo 8</p>
+    <img src="https://picsum.photos/200/300">
+    <a href="https://www.google.com">Google</a>
+    <h1>Titulo 5</h1>
+    <p>Parrafo 9</p>
+    <p>Parrafo 10</p>
+    <img src="https://picsum.photos/200/300">
+    <a href="https://www.google.com">Google</a>
+    <table>
+       <tr> <th>Nº h1</th> <th>Nº parrafo</th> <th>Nº img</th> <th>Nº a</th></tr>
+        <tr><td id="nh1"></td><td id="np"></td><td id="nimg"></td><td id="na"></td></tr>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+
+            let nh1 = $("h1").lenght;
+            let np = $("p").lenght;
+            let nimg = $("img").lenght;
+            let na = $("na").lenght;
+            $("#nh1").text(nh1);
+            $("#np").text(np);
+            $("#nimg").text(nimg);
+            $("#na").text(na);
+
+        });
+    </script>
+</body>
+</html>
