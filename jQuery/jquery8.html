@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 8</title>
+    <script src="jquery-3.7.1.js"></script> <!--Inclusion de jQuery-->
+</head>
+<body>
+    <h1>Ejemplo <span style="color: red">de encabezado</span></h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, commodi, in rerum eum molestias dolore accusamus earum illo quae quod et assumenda deleniti at? Voluptatem itaque nam ullam eveniet totam!</p>
+    <img src="https://picsum.photos/300" alt="Foto random">
+    <button id="boton1">Mostrar encabezado</button>
+    <button id="boton2">Mostrar parrafo</button>
+    <button id="boton3">Mostrar imagen</button>
+
+    <script>
+        $(document).ready(function () {
+            
+            $("#boton1").click(function () {  
+                alert("Encabezado: " + $("h1").html());
+            });
+
+            $("#boton2").click(function () {  
+                alert("Parrafo: " + $("p").html());
+            });
+
+            $("#boton3").click(function () {  
+                alert("Imagen: " + $("img").attr("src"));
+            });
+
+
+        });
+
+    </script>
+</body>
+</html>
