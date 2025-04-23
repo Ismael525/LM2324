@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 9</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <h1>Lista de enlaces</h1>
+    <ul>
+        <li><a href="">Elemento 1</a><img src="" alt=""></li>
+        <li><a href="">Elemento 2</a><img src="" alt=""></li>
+        <li><a href="">Elemento 3</a><img src="" alt=""></li>
+        <li><a href="">Elemento 4</a><img src="" alt=""></li>
+        <li><a href="">Elemento 5</a><img src="" alt=""></li>
+        <li><a href="">Elemento 6</a><img src="" alt=""></li>
+        <li><a href="">Elemento 7</a><img src="" alt=""></li>
+    </ul>
+    
+    <script>
+        $(document).ready(function () {
+            $("img").each(function (index) {
+                $(this).attr("src", "Github-Octicons-Accessibility-16.512.png");
+            })
+
+        });
+    </script>
+</body>
+</html>
