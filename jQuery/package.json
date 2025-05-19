@@ -1,0 +1,15 @@
+{
+  "name": "ajax",
+  "version": "1.0.0",
+  "description": "100 trucos de jquery",
+  "main": "football.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "author": "Jose Luis Núñez",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
