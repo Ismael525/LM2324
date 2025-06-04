@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Registro</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Registro de Usuario</h2>
+    <form id="registroForm">
+      <!-- Nombre -->
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre">
+      <div class="error" id="errorNombre"></div>
+
+      <!-- Correo -->
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo">
+      <div class="error" id="errorCorreo"></div>
+
+      <!-- Contraseña -->
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena">
+      <div class="error" id="errorContrasena"></div>
+
+      <!-- Confirmar contraseña -->
+      <label for="confirmar">Confirmar contraseña:</label>
+      <input type="password" id="confirmar">
+      <div class="error" id="errorConfirmar"></div>
+
+      <!-- Género -->
+      <p><strong>Género:</strong></p>
+      <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+      <label><input type="radio" name="genero" value="femenino"> Femenino</label>
+      <label><input type="radio" name="genero" value="otro"> Otro</label>
+      <div class="error" id="errorGenero"></div>
+
+      <!-- Intereses -->
+      <p><strong>Intereses:</strong></p>
+      <label><input type="checkbox" class="interes" value="deportes"> Deportes</label>
+      <label><input type="checkbox" class="interes" value="tecnologia"> Tecnología</label>
+      <label><input type="checkbox" class="interes" value="arte"> Arte</label>
+      <label><input type="checkbox" class="interes" value="viajes"> Viajes</label>
+      <div class="error" id="errorIntereses"></div>
+
+      <!-- Aceptar términos (ahora es radio) -->
+      <p><strong>Aceptar términos y condiciones:</strong></p>
+      <label><input type="radio" name="aceptaTerminos" value="si"> Sí</label>
+      <label><input type="radio" name="aceptaTerminos" value="no"> No</label>
+      <div class="error" id="errorTerminos"></div>
+
+      <br>
+      <button type="button" onclick="validarFormulario()">Registrar</button>
+    </form>
+
+    <div id="mensajeExito" class="exito"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

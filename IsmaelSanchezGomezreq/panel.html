@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel de Control</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <script src="jquery-3.7.1.js"></script> <!-- Hueco 1 -->
+</head>
+<body class="light-mode">
+
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Estadísticas</a></li>
+        <li><a href="#">Usuarios</a></li>
+        <li><a href="#">Configuración</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="topbar">
+        <h1>Bienvenido al Panel</h1>
+        <label class="switch">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider"></span>
+        </label>
+      </header>
+
+      <section class="cards">
+        <div class="card"><h3>Usuarios</h3><p>1,250</p></div>
+        <div class="card"><h3>Ventas</h3><p>$8,940</p></div>
+        <div class="card"><h3>Proyectos</h3><p>15</p></div>
+        <div class="card"><h3>Tareas</h3><p>37</p></div>
+      </section>
+
+      <section class="info">
+        <div class="chart">Gráfico de ejemplo (aquí iría una gráfica)</div>
+        <div class="updates">
+          <h4>Últimas actualizaciones</h4>
+          <ul>
+            <li>Nuevo usuario registrado</li>
+            <li>Sistema actualizado</li>
+            <li>Informe mensual generado</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="panel.js"></script>  <!-- Hueco 2 -->
+</body>
+</html>

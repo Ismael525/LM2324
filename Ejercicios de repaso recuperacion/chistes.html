@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chistes en Español</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #007BFF;
+    }
+
+    .chiste {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      line-height: 1.6;
+      min-height: 80px;
+      transition: opacity 0.3s ease;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .error {
+      color: red;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>😄 Chiste Aleatorio en Español</h1>
+    <div class="chiste" id="chiste">Cargando chiste...</div>
+    <button id="btnNuevoChiste">Obtener otro chiste</button>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+
+  <!-- Script principal -->
+  <script>
+    function obtenerChisteAleatorio() {
+      // Limpiar mensaje anterior
+      $('#chiste').text('Cargando chiste...');
+
+      $.get("https://v2.jokeapi.dev/joke/Any?lang=es ")
+        .done(function(data) {
+          let textoChiste = "";
+
+          if (data.type === "single") {
+            textoChiste = data.joke;
+          } else {
+            textoChiste = `${data.setup} — ${data.delivery}`;
+          }
+
+          $('#chiste').text(textoChiste);
+        })
+        .fail(function() {
+          $('#chiste').html('<span class="error">Hubo un error al cargar el chiste. Inténtalo más tarde.</span>');
+        });
+    }
+
+    // Cargar chiste al hacer clic en el botón
+    $('#btnNuevoChiste').on('click', function() {
+      obtenerChisteAleatorio();
+    });
+
+    // Cargar un chiste al iniciar
+    $(document).ready(function () {
+      obtenerChisteAleatorio();
+    });
+  </script>
+
+</body>
+</html>

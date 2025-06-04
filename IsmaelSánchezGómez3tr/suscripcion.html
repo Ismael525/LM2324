@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Suscripción</title>
+  <script src="jquery-3.7.1.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    /* Estilo para los checkbox y sus etiquetas para que aparezcan en línea */
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .checkbox-group {
+      margin-top: 10px;
+    }
+    .checkbox-group label {
+      display: inline;
+      font-weight: normal;
+      margin-left: 5px;
+    }
+    /* Estilo para el checkbox de términos y condiciones */
+    .terminos-group {
+      margin-top: 10px;
+    }
+    .terminos-group input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .terminos-group label {
+      display: inline;
+      font-weight: normal;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+      visibility: hidden;
+      height: 16px; /* Altura fija para reservar espacio */
+    }
+  </style>
+</head>
+<body>
+
+<form id="formularioSuscripcion">
+  <label for="nombreCompleto">Nombre Completo:</label>
+  <input type="text" id="nombreCompleto" name="nombreCompleto">
+  <span id="errorNombreCompleto" class="error">Por favor, ingrese un nombre válido.</span>
+
+  <label for="correoElectronico">Correo Electrónico:</label>
+  <input type="email" id="correoElectronico" name="correoElectronico">
+  <span id="errorCorreoElectronico" class="error">Por favor, ingrese un correo electrónico válido.</span>
+
+  <label for="dni">DNI:</label>
+  <input type="text" id="dni" name="dni">
+  <span id="errorDNI" class="error">Por favor, ingrese un DNI válido.</span>
+
+  <!-- Grupo de checkbox para preferencias de contenido -->
+  <label>Preferencias de Contenido:</label>
+  <div class="checkbox-group">
+    <input type="checkbox" id="preferencia1" name="preferencia" value="noticias">
+    <label for="preferencia1">Noticias</label>
+    <input type="checkbox" id="preferencia2" name="preferencia" value="ofertas">
+    <label for="preferencia2">Ofertas</label>
+  </div>
+  <span id="errorPreferencias" class="error">Por favor, seleccione al menos una preferencia de contenido.</span>
+
+  <label for="frecuenciaEnvio">Frecuencia de Envío:</label>
+  <select id="frecuenciaEnvio" name="frecuenciaEnvio">
+    <option value="">Seleccione una opción</option>
+    <option value="diario">Diario</option>
+    <option value="semanal">Semanal</option>
+    <option value="mensual">Mensual</option>
+  </select>
+  <span id="errorFrecuenciaEnvio" class="error">Por favor, seleccione una frecuencia de envío.</span>
+
+  <!-- Checkbox para términos y condiciones -->
+  <div class="terminos-group">
+    <input type="checkbox" id="terminos" name="terminos">
+    <label for="terminos">Acepto los términos y condiciones</label>
+  </div>
+  <span id="errorTerminos" class="error">Por favor, acepte los términos y condiciones.</span>
+
+  <button type="submit" id="boton">Suscribirse</button>
+</form>
+
+<script>
+      let nombreCompleto = document.getElementById("nombreCompleto");
+      let correoElectronico = document.getElementById("correoElectronico");
+      let dni = document.getElementById("dni");
+      let preferencia1 = document.getElementById("preferencia1");
+      let preferencia2 = document.getElementById("preferencia2");
+      let frecuenciaEnvio = document.getElementById("frecuenciaEnvio");
+      
+      if (nombreCompleto.value.trim() === "") {
+        mostrarError("errorNombreCompleto", "El nombre no puede estar vacío.");
+        valido = false;
+      }
+  
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correoElectronico.value.trim())) {
+        mostrarError("errorCorreoElectronico", "Introduce un correo electrónico válido.");
+        valido = false;
+      }
+  
+      function validar(value){
+
+    var validChars = 'TRWAGMYFPDXBNJZSQVHLCKET';
+    var nifRexp = /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKET]$/i;
+    var nieRexp = /^[XYZ][0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]$/i;
+    var str = value.toString().toUpperCase();
+
+    if (!nifRexp.test(str) && !nieRexp.test(str)) return false;
+
+    var nie = str
+    .replace(/^[X]/, '0')
+    .replace(/^[Y]/, '1')
+    .replace(/^[Z]/, '2');
+
+    var letter = str.substr(-1);
+    var charIndex = parseInt(nie.substr(0, 8)) % 23;
+
+    if (validChars.charAt(charIndex) === letter) return true;
+
+    return false;
+    }
+
+      if (!preferencia1.checked) {
+        mostrarError("errorPreferencias", "Debes elegir una preferencia");
+        valido = false;
+      }
+
+      if (!preferencia2.checked) {
+        mostrarError("errorPreferencias", "Debes elegir una preferencia");
+        valido = false;
+      }
+
+      if (frecuenciaEnvio.value.trim() === "Seleccione una opción") {
+        mostrarError("errorTerminos", "El nombre no puede estar vacío.");
+        valido = false;
+      }
+  
+      if (valido) {
+        form.submit(); // Enviar si todo está bien
+      }
+  
+    function mostrarError(idElemento, mensaje) {
+      let error = document.getElementById(idElemento);
+      if (error) {
+        error.textContent = mensaje;
+      }
+    }
+    
+    
+</script>
+
+</body>
+</html>
