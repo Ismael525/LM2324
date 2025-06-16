@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Producto</title>
+    <link rel="stylesheet" href="fakestore.css">
+</head>
+<body>
+    <h1>Consultar Producto</h1>
+    <label for="codigo_producto">Introduce el código del producto:</label>
+    <input type="text" id="codigo_producto" name="codigo_producto">
+    <button id="boton_buscar">Buscar</button>
+
+    <div id="info_producto">
+        <h2 id="titulo_producto"></h2>
+        <p><strong>Precio:</strong> <span id="precio_producto"></span></p>
+        <img id="imagen_producto" src="" alt="Imagen del producto" style="max-width: 200px;">
+        <p><strong>Descripción:</strong> <span id="descripcion_producto"></span></p>
+        <p><strong>Categoría:</strong> <span id="categoria_producto"></span></p>
+        <p><strong>Puntuación:</strong> <span id="puntuacion_producto_tasa"></span> (<span id="puntuacion_producto_conteo"></span> votos)</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="fakestore.js"></script>
+</body>
+</html>

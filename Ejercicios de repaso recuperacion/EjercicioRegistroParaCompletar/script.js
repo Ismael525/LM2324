@@ -173,7 +173,7 @@ function generarIdUsuario(direccionCorreo, numeroDni) {
 
 // Función para mostrar mensajes de error
 function mostrarError(elemento, mensaje) {
-    *************************
+    
 }
 
 // Función para limpiar todos los mensajes de error
@@ -199,7 +199,7 @@ function guardarEnLocalStorage(idUsuario) {
         privacyPolicy: casillaPoliticaPrivacidad.checked
     };
     
-    *************************
+      localStorage.setItem('datosUsuario', JSON.stringify(datosUsuario));
 }
 
 // Función para cargar datos desde localStorage
